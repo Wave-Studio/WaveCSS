@@ -1,0 +1,9 @@
+# Ignore some tests
+tests/old/
+tests/bundled/dist/
+tests/compile/missingClassList.txt
+tests/compile/test.css
+tests/compile/test.html
+
+# Ignore legacy code because it sucks
+oldsrc/

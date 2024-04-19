@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"lib": ["deno.window", "deno.ns", "deno.unstable", "dom"]
+	},
+	"fmt": {
+		"indentWidth": 4,
+		"lineWidth": 80,
+		"semiColons": true,
+		"singleQuote": false,
+		"useTabs": true
+	},
+	"tasks": {
+		"test": "deno task test:bundle && deno task test:compile",
+		"test:bundle": "deno run -A ./tests/bundled/index.ts && du -sh tests/bundled/dist/bundled.js && du -sh tests/bundled/dist/minified.js",
+		"test:compile": "deno run -A ./tests/compile/index.ts"
+	}
+}
